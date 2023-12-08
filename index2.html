@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="account.css" />
+  </head>
+  <body>
+    <div class="contanier">
+      <form action="post" class="form" id="login">
+        <h1 class="form__title">Create account</h1>
+
+        <div class="form__input-group">
+          <input
+            type="text"
+            class="form__input"
+            autofocus
+            placeholder="username"
+          />
+        </div>
+        <div class="form__input-group">
+          <input
+            type="text"
+            class="form__input"
+            autofocus
+            placeholder="Email address"
+          />
+        </div>
+        <div class="form__input-group">
+          <input
+            type="password"
+            class="form__input"
+            autofocus
+            placeholder="password"
+          />
+        </div>
+        <p id="message">password is <span id="strenth"></span></p>
+        <div class="form__input-group">
+          <input
+            type="password"
+            class="form__input"
+            autofocus
+            placeholder="comfirm passord"
+          />
+        </div>
+
+        <button class="form__button">Continue</button>
+        <p class="form__text"></p>
+
+        <p class="form__text">
+          <a class="form__link" href="account.html"
+            >Already have an account? sign in</a
+          >
+        </p>
+      </form>
+    </div>
+        <script>
+                var pass = document.getElementsByClassName("form__input")
+                var pass = document.getElementById("message")
+                var pass = document.getElementById("strenth")
+
+                pass.addEventListener('input', () =>  {
+                    if(pass.value.length > 0){
+                        msg.style.display = "block";
+                    }
+                    else{
+                        msg.style.display = "none";
+                    }
+                    if(pass.value.length < 4){
+                        src.innerHTML = "weak";
+                    }
+
+
+
+
+
+
+
+
+
+                })
+
+
+
+
+
+        </script>
+
+
+  </body>
+</html>
